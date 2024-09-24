@@ -1,5 +1,7 @@
 {
     "add_is_visible": true,
+    "can_fit_height": true,
+    "can_fit_width": true,
     "category": "visual elements",
     "default_dim": {
         "height": 200,
@@ -26,6 +28,11 @@
         "ALc": {
             "caption": "file upload ready",
             "name": "file_upload_ready"
+        },
+        "AMd": {
+            "caption": "upload complete",
+            "doc": "Fires when uppy is complete",
+            "name": "upload_complete"
         }
     },
     "fields": {
@@ -169,7 +176,7 @@
         },
         "ALI": {
             "caption": "allowed file types",
-            "doc": "uses file extensions and MIME file types.  This is a text string configuration separated by commas (without spaces)   example:  .jpg,.jpeg,image/*",
+            "doc": "uses file extensions and MIME file types.  This is a text string configuration separated by commas.   example:  .jpg,.jpeg,image/*",
             "editor": "DynamicValue",
             "name": "allowed_file_types",
             "optional": true,
@@ -198,6 +205,21 @@
             "editor": "Checkbox",
             "name": "auto_proceed",
             "rank": 22
+        },
+        "AMZ": {
+            "caption": "debug mode",
+            "default_val": false,
+            "editor": "Checkbox",
+            "name": "debug_mode",
+            "rank": 23
+        },
+        "AMa": {
+            "caption": "test1",
+            "default_val": "123",
+            "editor": "DynamicValue",
+            "name": "test1",
+            "rank": 24,
+            "value": "text"
         }
     },
     "icon": "ion-android-checkbox-blank",
@@ -255,6 +277,30 @@
             "is_list": true,
             "name": "all_file_urls",
             "value": "text"
+        },
+        "ALe": {
+            "caption": "number of files",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "number_of_files",
+            "value": "number"
+        },
+        "AMb": {
+            "caption": "success count",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "success_count",
+            "value": "number"
+        },
+        "AMc": {
+            "caption": "failure count",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "failure_count",
+            "value": "number"
         }
     }
 }
